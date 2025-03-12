@@ -13,7 +13,6 @@ class Node {
 class BST {
     Node root;
 
-    // Insert method to build BST
     public Node insert(Node root, int data) {
         if (root == null) {
             return new Node(data);
@@ -26,14 +25,12 @@ class BST {
         return root;
     }
 
-    // Method to insert all elements from an array into BST
     public void buildBST(int[] arr) {
         for (int num : arr) {
             root = insert(root, num);
         }
     }
 
-    // Inorder traversal (left-root-right) to display elements in sorted order
     public void inorderTraversal(Node root) {
         if (root != null) {
             inorderTraversal(root.left);
